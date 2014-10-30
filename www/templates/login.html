@@ -1,0 +1,22 @@
+<ion-view title="Login">
+  <ion-nav-buttons side="left">
+  </ion-nav-buttons>
+  <ion-content class="has-header">
+    <form ng-submit="login()">
+      <label for="name" class="item item-input">
+        <span class="input-label">Username</span>
+        <input type="text" ng-model="auth.username" placeholder="Username" required>
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Password</span>
+        <input input type="password" ng-model="auth.password" placeholder="Password" required>
+      </label>
+      <button class="button button-positive button-block" type="submit">
+        Login
+      </button>
+    </form>
+    <div ng-repeat="account in accounts">
+      {{account.username}}
+    </div>
+  </ion-content>
+</ion-view>

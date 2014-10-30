@@ -1,0 +1,18 @@
+<ion-view title="Stream">
+  <ion-content class="has-header">
+    Stream page
+    <div ng-if="address">Your location: {{address}}</div>
+    <div ng-if="!address">Getting your location...</div>
+    <div ng-if="ads">Loading ads around you.</div>
+    <ion-item ng-repeat="ad in ads | limitTo: limit">
+      <a ng-href="/#/tab/stream/{{ad._id}}">{{ad.title}}</a>
+      </br>
+      <p ng-if="ad.user">{{ad.user.username}}</p>
+      </br>
+      {{ad.address}}
+      </br>
+      {{ad.price}}
+    </ion-item>
+    <ion-infinite-scroll on-infinite="loadMore()" ng-if="moreData === 'true' && ads" distance="1%"></ion-infinite-scroll>
+  </ion-content>
+</ion-view>
