@@ -10,9 +10,10 @@
     </button>
   </ion-header-bar>
   <ion-content class="has-header" id="ads-container">
-    <ion-item type="item-text-wrap" ng-repeat="chat in chats | filter:search">
-      <a ng-href="/#/tab/categories/ad/{{ad._id}}">{{chat.username}}</a>
-    </ion-item>
+  <ion-list>
+      <ion-item type="item-text-wrap" ng-repeat="chat in chats | filter:search">
+        <a ng-href="/#/tab/chat/room/{{chat._id}}/{{userid}}">{{chat.username}}</a>
+      </ion-item>
     </ion-list>
   </ion-content>
 </ion-view>

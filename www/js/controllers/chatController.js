@@ -1,6 +1,7 @@
 pinpoint.controller('chatController', function($scope, $http, $state, $localStorage, socket) {
 	console.log('This is the chat controller');
 
+	$scope.userid = $localStorage.id;
 	$scope.getChats = function() {
 		var url = 'http://localhost:3000/api/chat/user/' + $localStorage.id;
 		$http.get(url).success(function(chats) {

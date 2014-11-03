@@ -13,4 +13,5 @@ pinpoint.controller('postidController', function($scope, $http, $state, $localSt
       console.log($scope.avatar);
     });
   };
+  $scope.getPost();
 });

@@ -64,7 +64,7 @@ pinpoint.controller('streamController', function($scope, $location, socket, $htt
   };
 
   $scope.getAds = function(lat, lng) {
-    var url = 'http://localhost:3000/api/ads/location/' + lng + '/' + lat;
+    var url = 'http://www.pinpoint.zone/api/ads/location/' + lng + '/' + lat;
 
     $http.get(url).success(function(ads) {
       console.log(ads);

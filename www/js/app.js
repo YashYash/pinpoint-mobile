@@ -163,7 +163,7 @@ pinpoint.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
     }
   })
   .state('tab.post-categories', {
-    url: '/post/categories',
+    url: '/post/all/categories',
     views: {
       'tab-post': {
         templateUrl: 'templates/post-categories.html',
@@ -173,7 +173,7 @@ pinpoint.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
   })
 
   .state('tab.post-form', {
-    url: '/post/:id',
+    url: '/post/form/:id',
     views: {
       'tab-post': {
         templateUrl: 'templates/post-form.html',
@@ -190,7 +190,17 @@ pinpoint.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
         controller: 'chatController'
       }
     }
-  })  
+  })
+
+  .state('tab.chat-room', {
+    url: '/chat/room/:idone/:idtwo',
+    views: {
+      'tab-chat': {
+        templateUrl: 'templates/chat-room.html',
+        controller: 'chatroomController'
+      }
+    }
+  })    
 
   .state('tab.account', {
     url: '/account',
