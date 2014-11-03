@@ -9,13 +9,15 @@
     "gulp-minify-css": "^0.3.0",
     "gulp-rename": "^1.2.0",
     "socket.io": "^1.1.0",
-    "auth0-angular": "2.2.*",
     "express": "^4.10.1"
+  },
+  "repository": {
+    "type":"git",
+    "url": "https://github.com/YashYash/pinpoint-mobile.git"
   },
   "devDependencies": {
     "bower": "^1.3.3",
     "gulp-util": "^2.2.14",
     "shelljs": "^0.3.0",
-    "auth0-angular": "2.2.*"
   }
 }
